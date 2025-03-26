@@ -13,6 +13,7 @@ nav {
     background-color: black; /* Black background */
     padding: 10px 0;
     text-align:left;
+    height: fit-content;
 }
 .login{
     display: flex;
@@ -72,10 +73,9 @@ nav ul li a:hover {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    
 }
 .classpre {
     font-size:36px;
