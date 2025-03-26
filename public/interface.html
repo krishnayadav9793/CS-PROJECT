@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Tourism Guide</title>
+    <style>
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            background-size: cover;
+            filter: brightness(100%);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color:white;
+        }
+        nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+}
+    nav ul li a {
+       color: white;
+       text-decoration: none;
+       font-size:12px;
+       font-weight: bold;
+       }
+        h1{
+            margin-top:60px;
+            font-size:4vw;
+            font-weight: bold;
+            color:white; 
+            text-shadow: 3px 3px 5px rgba(1, 0, 11, 0.7), 
+                 -2px -2px 5px rgba(255, 255, 255, 0.5);
+            
+        }
+        .fullpage{
+            position: relative;
+            display: flex;
+            width: 100%;
+            height:100vh;
+            z-index:4;
+        }
+    .bg-video{
+    position: absolute;
+    display:flex;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:auto;
+    z-index: -1;
+        }
+        header{
+            position:relative;
+            background-color:black;
+            width:100vw;
+            color: white;
+            display:flex;
+            top:0;
+            left:0;
+            height:70px; 
+            z-index:10;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .tag{
+            margin-top: 0px;
+            color:white;
+            font-size:14px;
+            text-align:center;
+
+        }
+        
+        ul{
+            margin-top:40px;
+            padding: 0;
+            color:white;
+            display:flex;
+            gap:15px;
+            padding: left 20px;
+        }
+        
+        .top{
+            display: inline-block;
+        }
+        .tabs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            justify-content: center;
+            gap: 20px;
+            padding:20px;
+            margin: auto;
+            border: 10px solid black;
+        }
+        .classpre{
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+        }
+        .preveiw {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+    height: 100vh;
+    margin:50PX;
+    max-width: 100%; 
+}
+
+        h3{
+        padding-left:110px;
+        margin-top:80px;
+        margin-left: 20px;
+        font-size:40px;
+        font-weight: bold;
+        gap:50px;
+        color:white;
+        }
+        h2{
+            margin-top:30px;
+            margin-left: 30px;
+            padding-left:70px;
+            color:white;
+
+        }
+        p{
+            margin-top:30px;
+            margin-left:40px;
+            font-style:oblique;
+            font-size:20px;
+            padding-left: 50px;
+            padding-bottom: 20px;
+            color:white;
+        }
+        .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+h2 {
+    padding-right: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    font-weight: bold;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background: #0056b3;
+}
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: gray;
+}
+
+        .quote{
+            font-size:30px;
+            font-weight: bold;
+            margin-bottom:100px;
+            padding-left: 40px;
+        }
+        .video {
+    position: relative;
+    width: 100vw;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: black;
+}
+
+/* #fullVideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; 
+}
+.video2 {
+    position: relative;
+    width: 100vw;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: black;
+}
+#fullVideo2 {
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover; 
+}
+.video, .video2 {
+    margin-bottom: 100px;
+    border: 20px solid black; 
+}*/
+.video-text {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #05090b;
+    margin: 30px 0;
+} 
+.video, .video2 {
+    position: relative;
+    width: 97%;  /* Adjust width to leave space for margins */
+    height: 97%; /* Adjust height to leave space for margins */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: black;
+    margin: auto;  /* Centers the video properly */
+    border: 20px solid black;
+    margin-bottom:50px;
+    margin-top:100px;
+}
+
+#fullVideo, #fullVideo2 {
+    width: 100%;
+    height:auto;
+    max-height:90vh;
+    object-fit: cover;
+}
+
+
+
+
+
+.tab-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        }
+    .tab {
+    width: 200px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+
+        }
+        .website-mission {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px; 
+    padding: 10px;
+    background-color: #f8f8f8; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}     
+.explore-heading {
+    text-align: center;
+    font-size: 40px;
+    color: #51a6d7;
+    margin-top: 30px;
+    margin-bottom:40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+
+        .main{
+          margin-top:19vh;
+        }
+        .tab:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.6);
+
+        }
+        .tab img {
+            width: 100px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            opacity: 0.5;
+        }
+        .state-name {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+}
+.container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            padding-right: 100px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <p class="tag">Best in Tourism in India (2025)</p>
+        </nav>
+    </header>
+    <div class="fullpage1">
+        <video autoplay loop muted playsinline class="bg-video">
+            <source src="images/back.mp4" type="video/mp4">
+        </video>
+    <div class="classpre">
+    <h1>Explore India - A Tourist Guide</h1>
+    <div class="preveiw">
+        <h3>DISCOVER INCREDIBLE DESTINATIONS</h3>
+        <h2>Unveiling the Beauty of India</h2>
+        <p>India is more than just a place—it's a story waiting to be told.<br>
+        From misty mountains to golden deserts,<br>bustling cities to serene beaches,
+         every journey is an unforgettable experience.</p>
+         <div class="button-container">
+            <button>Start Your Journey</button>
+        </div>
+        <div class="quote">
+            <p>"India is not a nation, nor a country. It is a subcontinent of nationalities,  
+            a mosaic of cultures, traditions, and languages woven together by history, unity, and spirit."</p>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="video">
+        <video id="fullVideo" autoplay loop muted controls>
+            <source src="images/Spiritual.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        </div>
+    
+    <h2 class="video-text">Explore India Like Never Before</h2> 
+    
+    <div class="video2">
+        <video id="fullVideo2" autoplay loop muted controls>
+            <source src="images/Nature.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="website-mission">
+        <p1>India Tourism Guide is here to make your journey seamless!<br>  
+           Discover breathtaking destinations, rich cultural heritage, and travel tips<br>  
+           that help you explore India like never before.<br>  
+           From vibrant cities to serene landscapes,<br>  
+           we provide everything you need for an unforgettable adventure.</p1>
+    </div>
+    <h4 class="explore-heading">Let's Explore Together</h4>
+    
+    <div class="tabs" id="stateTabs"></div>
+    <div class="tab-container">
+
+    </div>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="footer">
+            <p>&copy; 2025 Explore India - All Rights Reserved</p>
+        </div>
+    </div>
+    <script>
+        const states = {
+            "Andhra Pradesh": { image: "images/andhra.jpg", url: "https://en.wikipedia.org/wiki/Andhra_Pradesh" },
+            "Arunachal Pradesh": { image: "images/arunachal.jpg", url: "https://en.wikipedia.org/wiki/Arunachal_Pradesh" },
+            "Assam": { image: "images/assam.jpg", url: "https://en.wikipedia.org/wiki/Assam" },
+            "Bihar": { image: "images/bihar.jpg", url: "https://en.wikipedia.org/wiki/Bihar" },
+            "Goa": { image: "images/goa.jpg", url: "https://en.wikipedia.org/wiki/Goa" },
+            "Rajasthan": { image: "images/rajasthan.jpg", url: "https://en.wikipedia.org/wiki/Rajasthan" },
+            "Gujarat": { image: "images/gujarat.jpg", url: "https://en.wikipedia.org/wiki/Gujarat" },
+            "Kerala": { image: "images/kerala.jpg", url: "https://en.wikipedia.org/wiki/Kerala" },
+            "Madhya Pradesh": { image: "images/madhya.jpg", url: "https://en.wikipedia.org/wiki/Madhya_Pradesh" },
+            "Maharashtra": { image: "images/maharashtra.jpg", url: "https://en.wikipedia.org/wiki/Maharashtra" },
+            "Manipur": { image: "images/manipur.jpg", url: "https://en.wikipedia.org/wiki/Manipur" },
+            "Meghalaya": { image: "images/meghalaya.jpg", url: "https://en.wikipedia.org/wiki/Meghalaya" },
+            "Mizoram": { image: "images/mizoram.jpg", url: "https://en.wikipedia.org/wiki/Mizoram" },
+            "Nagaland": { image: "images/nagaland.jpg", url: "https://en.wikipedia.org/wiki/Nagaland" },
+            "Odisha": { image: "images/odisha.jpg", url: "https://en.wikipedia.org/wiki/Odisha" },
+            "Punjab": { image: "images/punjab.jpg", url: "https://en.wikipedia.org/wiki/Punjab,_India" },
+            "Sikkim": { image: "images/sikkim.jpg", url: "https://en.wikipedia.org/wiki/Sikkim" },
+            "Tamil Nadu": { image: "images/tamilnadu.jpg", url: "https://en.wikipedia.org/wiki/Tamil_Nadu" },
+            "Telangana": { image: "images/telangana.jpg", url: "https://en.wikipedia.org/wiki/Telangana" },
+            "Tripura": { image: "images/tripura.jpg", url: "https://en.wikipedia.org/wiki/Tripura" },
+            "Uttar Pradesh": { image: "images/uttarpradesh.jpg", url: "https://en.wikipedia.org/wiki/Uttar_Pradesh" },
+            "Uttarakhand": { image: "images/uttarakhand.jpg", url: "https://en.wikipedia.org/wiki/Uttarakhand" },
+            "West Bengal": { image: "images/westbengal.jpg", url: "https://en.wikipedia.org/wiki/West_Bengal" },
+            "Chhattisgarh": { image: "images/chhattisgarh.jpg", url: "https://en.wikipedia.org/wiki/Chhattisgarh" },
+            "Haryana": { image: "images/haryana.jpg", url: "https://en.wikipedia.org/wiki/Haryana" },
+            "Himachal Pradesh": { image: "images/himachal.jpg", url: "https://en.wikipedia.org/wiki/Himachal_Pradesh" },
+            "Jharkhand": { image: "images/jharkhand.jpg", url: "https://en.wikipedia.org/wiki/Jharkhand" },
+            "Karnataka": { image: "images/karnataka.jpg", url: "https://en.wikipedia.org/wiki/Karnataka" }
+        };
+        
+        const allStates = [
+            "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"
+        ];
+        
+        const stateTabs = document.getElementById("stateTabs");
+Object.keys(states).forEach(state => {
+    let container = document.createElement("div");
+    container.className = "tab-container";
+
+    let tab = document.createElement("div");
+    tab.className = "tab";
+    tab.onclick = () => window.open(states[state].url, '_blank');
+
+    let imageURL = states[state]?.image || "images/default.jpg";
+    tab.style.backgroundImage = `url('${imageURL}')`;
+
+    let stateName = document.createElement("div");
+    stateName.className = "state-name";
+    stateName.textContent = state;
+
+    container.appendChild(tab);
+    container.appendChild(stateName);
+    stateTabs.appendChild(container);
+});
+
+    </script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for reaching out! We will get back to you soon.');
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let video = document.querySelector(".bg-video"); // Select your video element
+            video.playbackRate = 0.5; // Adjust playback speed (1 = normal, <1 = slower, >1 = faster)
+        });
+    </script>
+    
+</body>
+</html>
+ 

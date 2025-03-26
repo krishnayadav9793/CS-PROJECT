@@ -1,0 +1,26 @@
+{
+  "name": "cs-project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishnayadav9793/CS-PROJECT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krishnayadav9793/CS-PROJECT/issues"
+  },
+  "homepage": "https://github.com/krishnayadav9793/CS-PROJECT#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.0.1",
+    "hbs": "^4.2.0",
+    "mongoose": "^8.13.0"
+  }
+}
