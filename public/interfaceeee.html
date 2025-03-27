@@ -13,14 +13,18 @@
     <!-- Header Section -->
     <header>
         <nav>
+            <div class="references">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+            <div class="sitelog">
+
+            </div>
             <div class="login">
                 <div id="logo"><img src="./images/login.png" height="25px" alt="login"></div>
-                <div id="loginpage"><a href="login.html" style="text-decoration: none; color: white;">Login</a></div>
+                <div id="loginpage"><a href="login.html" style="text-decoration: none; color: white;">Login</a></div></div>
             </div>
             <p class="tagline">Best in Tourism in India (2025)</p>
         </nav>
@@ -94,7 +98,8 @@
 
     <!-- Contact Section -->
     <div class="container">
-        <h2>Contact Us</h2>
+        <div class="contactbox">
+        <h2 style="display: flex; justify-content: center; width: 100%;">Contact Us</h2>
         <form id="contactForm">
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -108,21 +113,21 @@
                 <label for="message">Message:</label>
                 <textarea id="message" rows="4" required></textarea>
             </div>
-            <button type="submit">Send Message</button>
-        </form>
+            <button type="submit" style="width: fit-content;">submit</button>
+        </form></div>
+        <footer class="footer">
+            <p>&copy; 2025 Explore India - All Rights Reserved</p>
+        </footer>
     </div>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>&copy; 2025 Explore India - All Rights Reserved</p>
-    </footer>
-
 </body>
 </html>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+    const name=document.addEventListener("click",()=>{
+        return ImageData
+    })
     const states = {
-        "Andhra Pradesh": { image: "images/andhra.jpg", url: "https://en.wikipedia.org/wiki/Andhra_Pradesh" },
+        "Andhra Pradesh": { image: "images/andhra.jpg", url: `states.html` },
         "Arunachal Pradesh": { image: "images/arunachal.jpg", url: "https://en.wikipedia.org/wiki/Arunachal_Pradesh" },
         "Assam": { image: "images/assam.jpg", url: "https://en.wikipedia.org/wiki/Assam" },
         "Bihar": { image: "images/bihar.jpg", url: "https://en.wikipedia.org/wiki/Bihar" },
