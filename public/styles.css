@@ -1,20 +1,23 @@
-
 *{
     text-transform: capitalize;
 }
 body {
     overflow-x: hidden;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
+    /* font-family: 'Poppins', sans-serif;*/
+    /* */
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color:white;
     /* height: fit-content; */
     /* width: fit-content; */
     /* min-width: 100vw;
     min-height: 100vh; */
 }
 nav {
-    background-color: black; /* Black background */
+ --tw-text-opacity: 1;
+ background: #0046c0; 
+    /* background-color: rgb(24, 91, 139); */
     padding: 10px 0;
     text-align:left;
     /* height: fit-content; */
@@ -55,7 +58,29 @@ nav ul li a {
 nav ul li a:hover {
     color: #f4a261;
 }
+.quote{
+    font-size:22px;
+    font-weight: bold;
+    margin-bottom:100px;
+    padding-left: 40px;
+}
+h3{
+    font-size:45px;
+    font-weight: bold;
+    /* gap:50px; */
+    color:white;
+    }
+h2{ 
+    font-size:35px;
+    font-style: italic;
+    color:white;
 
+    }
+    /* p{
+        font-style:oblique;
+        font-size:25px;
+        
+    } */
 .tagline{
     color:white;
     font-size:16px;
@@ -100,16 +125,17 @@ nav ul li a:hover {
     color: white;
     background: rgba(0, 0, 0, 0.1);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    -webkit-text-stroke: 0.8px black;
+    /* -webkit-text-stroke: 0.8px rgb(4, 4, 4); */
     z-index:2;
     word-break: break-word;
     overflow: scroll;
 }
 .preveiw {
+    font-family: "Poppins",sans-serif;
     position: relative;
     z-index: 2; 
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     max-width: 80%;
     margin: 20px auto;
     /* display: flex;
@@ -120,9 +146,14 @@ nav ul li a:hover {
 .visit-text {
     text-align: center;
     font-size: 38px;
-    font-weight: bold;
-    color:black;
-    text-shadow: 2px 2px 5px rgb(168, 240, 232);
+    font-weight: bold; 
+    background-color:rgb(236, 252, 251);
+    color:#034489;
+    font-family: 'Tangerine', serif;
+    font-size: 48px;
+    text-shadow: 4px 4px 4px #779ce7;
+    /* color:rgb(25, 48, 226);
+    text-shadow: 2px 2px 5px rgb(168, 240, 232); */
     margin: 30px 0;
     padding: 0 15px;
 }
@@ -142,8 +173,10 @@ nav ul li a:hover {
     text-align: center;
     font-size: 38px;
     font-weight: bold;
-    color:black;
-    text-shadow: 2px 2px 5px rgb(145, 145, 229);
+    background-color:rgb(236, 252, 251);
+    color:#034489;
+    font-family: 'Tangerine', serif;
+    text-shadow: 4px 4px 4px #779ce7;
     margin: 30px 0;
     padding: 0 15px;
 }
@@ -151,19 +184,22 @@ nav ul li a:hover {
     text-align: center;
     font-size: 25px;
     font-weight: bold;
-    color:black;
-    text-shadow: 2px 2px 5px rgb(214, 161, 241);
-    box-shadow: 2px 2px 15px rgba(248, 3, 3, 0.1);
+    background-color:rgb(236, 252, 251);
+    /* font-family: 'Lobster', cursive; */
+    /* font-family: 'Orbitron', sans-serif; */
+    color:rgb(15, 103, 121);
+    text-shadow: 2px 2px 5px rgb(142, 184, 230);
+    box-shadow: 2px 2px 15px rgba(7, 26, 204, 0.2);
     margin: 30px 0;
     padding: 0 15px;
 }
 .explore-heading {
-    text-align: center;
-    font-size: 40px;
+    text-align:left;
+    font-size: 50px;
     font-weight: bold;
-    color:black;
-    text-shadow: 2px 2px 5px rgb(215, 159, 243);
-    box-shadow: 2px 2px 15px rgba(255, 255, 255, 0);
+    color:#0b6e92;
+    text-shadow: 2px 2px 5px rgb(115, 130, 242);
+    box-shadow: 2px 2px 15px rgba(251, 2, 2, 0);
     margin: 30px 0;
     padding: 0 15px;
 
@@ -199,14 +235,14 @@ nav ul li a:hover {
 /* Individual Tab Container */
 .tab-container {
     flex: 0 0 auto; 
-    width: 230px; 
+    width: 450px; 
     text-align: center;
 }
 
 /* Tab Style */
 .tab {
     width: 100%;
-    height: 180px;
+    height: 300px;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -214,7 +250,9 @@ nav ul li a:hover {
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
-
+.tabcolor{
+    background-color:white;
+}
 /* Tab Hover Effect */
 .tab:hover {
     transform: scale(1.1);
@@ -242,11 +280,6 @@ nav ul li a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-h2 {
-    padding-right: 100px;
-    text-align: center;
-    margin-bottom: 20px;
-}
 .form-group {
     margin-bottom: 15px;
 }
@@ -263,15 +296,16 @@ input, textarea {
 button {
     width: 15%;
     padding: 10px;
-    background: #acccee;
-    color: rgb(5, 0, 0);
+    --tw-text-opacity: 1;
+    background-color: rgb(0 87 217/var(--tw-text-opacity));
+    color:white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
 }
 button:hover {
-    background: #0056b3;
+    background: #363da3;
 }
 .footer {
     text-align: center;
@@ -280,8 +314,191 @@ button:hover {
     color: gray;
 }
 
+.inspiration-section {
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    padding: 40px 10px;
+    background: #0046c0; 
+    color: white;
+    text-align: center;
+}
+
+/* Header Styling */
+.inspiration-section .header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.inspiration-section .header p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.inspiration-section .social-icons i {
+    font-size: 22px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.inspiration-section .social-icons i:hover {
+    color: #ffdd57; 
+}
+
+/* Image Gallery Grid */
+.inspiration-section .image-gallery {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto; 
+    gap: 10px; 
+}
+
+.inspiration-section .image-box {
+    flex: 0 0 250px; 
+    display: flex;
+    height: 350px;
+    border-radius: 5px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+.inspiration-section .image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.inspiration-section .image-box img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.4);
+}
+
+/* Username Tag on Image */
+.inspiration-section .image-box span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.image-container {
+    flex: 1 1 calc(33.33% - 15px); 
+}
+
+/* Footer Styling */
+footer {
+    background-color: white;
+    color: black;
+    padding: 40px 80px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+/* Left Section */
+.footer-left {
+    flex:0.5;
+    max-width: 300px;
+}
+
+.brand {
+    font-size: 24px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.offer {
+    font-weight: bold;
+    color: #007bff;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.privacy {
+    font-size: 12px;
+}
+.footer-right {
+    display: flex;
+    flex-wrap: nowrap;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
+    max-width: 70%;
+}
+
+.footer-column {
+    width: 200px;
+}
+
+.footer-column h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 8px 0;
+    font-size: 14px;
+}
 
 @media (max-width: 480px) {
+    h1{
+        font-size:20px;
+
+    }
+    h3{
+        font-size:15px;
+    }
+    h2{
+        font-size:12px; 
+    }
+    p{
+        font-size:12px;
+    }
     .container {
         width: 90%;
         padding: 15px;
@@ -301,7 +518,17 @@ button:hover {
         font-size: 14px;
     }
     .button-container{
-        display: flex;
+        display: flex; 
+        align-self: center;
+    }
+    button {
+        width: 50%;
+        font-size: 12px;
+        padding: 6px;
+    }
+    .tab-container { 
+        width: 100px; 
+        text-align: center;
     }
 }
 
@@ -343,7 +570,7 @@ button:hover {
 }
 
 .tab {
-    width: 120px; 
+    width:80px; 
     height: 100px;
 }
 
@@ -351,9 +578,11 @@ button:hover {
     font-size: 12px;
     padding: 5px;
 }
+.image-container {
+    flex: 1 1 calc(50% - 15px); /* Adjusts to 2 images per row */
 
 
-}
+}}
 @media (max-width: 480px) {
     nav ul {
         gap: 10px;
@@ -402,5 +631,35 @@ button:hover {
     .state-name {
         font-size: 10px;
         padding: 3px;
+    }
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .button-container{
+        display: flex;
+    }
+    button {
+        align-items: center;
+        width: 50%;
+        font-size: 12px;
+        padding: 6px;
+    }
+    .tab-container { 
+        width: 100px; 
+        text-align: center;
+    }
+    .image-container {
+        flex: 1 1 100%;
     }
 }
