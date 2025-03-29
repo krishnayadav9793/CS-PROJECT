@@ -1,5 +1,6 @@
 *{
     text-transform: capitalize;
+
 }
 body {
     overflow-x: hidden;
@@ -316,7 +317,7 @@ button:hover {
 
 .inspiration-section {
     width: 100vw; /* Full width */
-    height: 100vh; /* Full height */
+    height: 70vh; /* Full height */
     padding: 40px 10px;
     background: #0046c0; 
     color: white;
@@ -393,44 +394,50 @@ button:hover {
 .image-container {
     flex: 1 1 calc(33.33% - 15px); 
 }
-
-/* Footer Styling */
 footer {
     background-color: white;
     color: black;
     padding: 40px 80px;
-    font-family: Arial, sans-serif;
 }
-
 .footer-container {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
-
-/* Left Section */
 .footer-left {
-    flex:0.5;
     max-width: 300px;
 }
-
 .brand {
     font-size: 24px;
     color: #007bff;
     font-weight: bold;
 }
-
 .social-icons img {
     width: 30px;
     margin-right: 10px;
 }
-
-.offer {
-    font-weight: bold;
-    color: #007bff;
+.footer-right {
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 70%;
 }
-
+.footer-column {
+    width: 200px;
+}
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column ul li {
+    margin: 8px 0;
+    font-size: 14px;
+}
 input[type="email"] {
     width: 100%;
     padding: 10px;
@@ -438,7 +445,6 @@ input[type="email"] {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 button {
     background-color: #007bff;
     color: white;
@@ -448,42 +454,10 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
-
 button:hover {
     background-color: #0056b3;
 }
 
-.privacy {
-    font-size: 12px;
-}
-.footer-right {
-    display: flex;
-    flex-wrap: nowrap;
-    /* justify-content: space-between; */
-    justify-content: flex-end;
-    max-width: 70%;
-}
-
-.footer-column {
-    width: 200px;
-}
-
-.footer-column h3 {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-column ul li {
-    margin: 8px 0;
-    font-size: 14px;
-}
 
 @media (max-width: 480px) {
     h1{
