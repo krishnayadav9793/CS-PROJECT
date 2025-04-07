@@ -1,0 +1,52 @@
+
+.attractions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* 👈 Center the row */
+    gap: 30px;                 /* 👈 Space between cards */
+  }
+  
+  /* Attraction card — responsive side by side */
+  .attraction-card {
+    background-color: #fff8e1;
+    border: 2px solid #ffe0b2;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 300px;              /* 👈 Fixed width for side-by-side */
+    text-align: center;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .attraction-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .attraction-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .attraction-card h4 {
+    margin: 12px 12px 8px;
+    font-size: 20px;
+    color: #bf360c;
+  }
+  
+  .attraction-card p {
+    margin: 0 12px 12px;
+    font-size: 14px;
+    color: #5d4037;
+    line-height: 1.5;
+  }
+  
+  .attraction-card a {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #d84315;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  

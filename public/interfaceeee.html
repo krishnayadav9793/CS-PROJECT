@@ -132,6 +132,7 @@
                     <h3>Subscribe</h3>
                     <p>Get 20% off your first order.</p>
                     <input type="email" placeholder="Email address">
+                    .
                     <button>Subscribe now</button>
                 </div>
                 <div class="footer-right">
@@ -195,36 +196,29 @@
         return ImageData
     })
     const states = {
-        "Andhra Pradesh": { image: "images/andhra.jpg", url: `states.html` },
-        "Arunachal Pradesh": { image: "images/arunachal.jpg", url: "https://en.wikipedia.org/wiki/Arunachal_Pradesh" },
-        "Assam": { image: "images/assam.jpg", url: "https://en.wikipedia.org/wiki/Assam" },
-        "Bihar": { image: "images/bihar.jpg", url: "https://en.wikipedia.org/wiki/Bihar" },
-        "Goa": { image: "images/goa.jpg", url: "https://en.wikipedia.org/wiki/Goa" },
-        "Rajasthan": { image: "images/rajasthan.jpg", url: "https://en.wikipedia.org/wiki/Rajasthan" },
-        "Gujarat": { image: "images/gujarat.jpg", url: "https://en.wikipedia.org/wiki/Gujarat" },
-        "Kerala": { image: "images/kerala.jpg", url: "https://en.wikipedia.org/wiki/Kerala" },
-        "Madhya Pradesh": { image: "images/madhya.jpg", url: "https://en.wikipedia.org/wiki/Madhya_Pradesh" },
-        "Maharashtra": { image: "images/maharashtra.jpg", url: "https://en.wikipedia.org/wiki/Maharashtra" },
-        "Manipur": { image: "images/manipur.jpg", url: "https://en.wikipedia.org/wiki/Manipur" },
-        "Meghalaya": { image: "images/meghalaya.jpg", url: "https://en.wikipedia.org/wiki/Meghalaya" },
-        "Mizoram": { image: "images/mizoram.jpg", url: "https://en.wikipedia.org/wiki/Mizoram" },
-        "Nagaland": { image: "images/nagaland.jpg", url: "https://en.wikipedia.org/wiki/Nagaland" },
-        "Odisha": { image: "images/odisha.jpg", url: "https://en.wikipedia.org/wiki/Odisha" },
-        "Punjab": { image: "images/punjab.jpg", url: "https://en.wikipedia.org/wiki/Punjab,_India" },
-        "Sikkim": { image: "images/sikkim.jpg", url: "https://en.wikipedia.org/wiki/Sikkim" },
-        "Tamil Nadu": { image: "images/tamilnadu.jpg", url: "https://en.wikipedia.org/wiki/Tamil_Nadu" },
-        "Telangana": { image: "images/telangana.jpg", url: "https://en.wikipedia.org/wiki/Telangana" },
-        "Tripura": { image: "images/tripura.jpg", url: "https://en.wikipedia.org/wiki/Tripura" },
-        "Uttar Pradesh": { image: "images/uttarpradesh.jpg", url: "https://en.wikipedia.org/wiki/Uttar_Pradesh" },
-        "Uttarakhand": { image: "images/uttarakhand.jpg", url: "https://en.wikipedia.org/wiki/Uttarakhand" },
-        "West Bengal": { image: "images/westbengal.jpg", url: "https://en.wikipedia.org/wiki/West_Bengal" },
-        "Chhattisgarh": { image: "images/chhattisgarh.jpg", url: "https://en.wikipedia.org/wiki/Chhattisgarh" },
-        "Haryana": { image: "images/haryana.jpg", url: "https://en.wikipedia.org/wiki/Haryana" },
-        "Himachal Pradesh": { image: "images/himachal.jpg", url: "https://en.wikipedia.org/wiki/Himachal_Pradesh" },
-        "Jharkhand": { image: "images/jharkhand.jpg", url: "https://en.wikipedia.org/wiki/Jharkhand" },
-        "Karnataka": { image: "images/karnataka.jpg", url: "https://en.wikipedia.org/wiki/Karnataka" }
-    };
-
+            "Andhra Pradesh": { image: "images/andhra.jpg", url: "city.html?state=Andhra%20Pradesh" },
+            "Arunachal Pradesh": { image: "images/arunachal.jpg", url: "city.html?state=Arunachal%20Pradesh" },
+            "Assam": { image: "images/assam.jpg", url: "city.html?state=Assam" },
+            "Bihar": { image: "images/bihar.jpg", url: "city.html?state=Bihar" },
+            "Goa": { image: "images/goa.jpg", url: "city.html?state=Goa" },
+            "Rajasthan": { image: "images/rajasthan.jpg", url: "city.html?state=Rajasthan" },
+            "Gujarat": { image: "images/gujarat.jpg", url: "city.html?state=Gujarat" },
+            "Kerala": { image: "images/kerala.jpg", url: "city.html?state=Kerala" },
+            "Madhya Pradesh": { image: "images/madhya.jpg", url: "city.html?state=Madhya%20Pradesh" },
+            "Maharashtra": { image: "images/maharashtra.jpg", url: "city.html?state=Maharashtra" },
+            "Manipur": { image: "images/manipur.jpg", url: "city.html?state=Manipur" },
+            "Meghalaya": { image: "images/meghalaya.jpg", url: "city.html?state=Meghalaya" },
+            "Mizoram": { image: "images/mizoram.jpg", url: "city.html?state=Mizoram" },
+            "Nagaland": { image: "images/nagaland.jpg", url: "city.html?state=Nagaland" },
+            "Odisha": { image: "images/odisha.jpg", url: "city.html?state=Odisha" },
+            "Punjab": { image: "images/punjab.jpg", url: "city.html?state=Punjab" },
+            "Sikkim": { image: "images/sikkim.jpg", url: "city.html?state=Sikkim" },
+            "Tamil Nadu": { image: "images/tamilnadu.jpg", url: "city.html?state=Tamil%20Nadu" },
+            "Telangana": { image: "images/telangana.jpg", url: "city.html?state=Telangana" },
+            "Uttar Pradesh": { image: "images/up.jpg", url: "city.html?state=Uttar%20Pradesh" },
+            "Uttarakhand": { image: "images/uttarakhand.jpg", url: "city.html?state=Uttarakhand" },
+            "West Bengal": { image: "images/westbengal.jpg", url: "city.html?state=West%20Bengal" }
+        };
     const stateTabs = document.getElementById("stateTabs");
     
     if (stateTabs) {
@@ -263,6 +257,58 @@
         video.playbackRate = 0.5;
     }
     });
+      // Wait for the DOM to load
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Extract state name from query parameter
+//   const urlParams = new URLSearchParams(window.location.search);
+//   const state = urlParams.get("state");
+
+//   if (!state) {
+//     document.getElementById("title").innerText = "State not specified.";
+//     return;
+//   }
+
+//   // Fetch all states data from backend API
+//   fetch("/api/states")
+//     .then((response) => response.json())
+//     .then((states) => {
+//       if (!states[state]) {
+//         document.getElementById("title").innerText = "State data not found.";
+//         return;
+//       }
+
+//       const stateData = states[state];
+//       document.getElementById("title").innerText = `Tourist Cities in ${state}`;
+
+//       const container = document.getElementById("cards-container");
+//       container.innerHTML = ""; // Clear any previous content
+
+//       // Loop through cities
+//       stateData.cities.forEach((city) => {
+//         const card = document.createElement("div");
+//         card.classList.add("city-card");
+
+//         card.innerHTML = `
+//           <img src="${city.image}" alt="${city.name}" class="city-image" />
+//           <h3>${city.name}</h3>
+//           <p>${city.description}</p>
+//           <button class="view-more">View Attractions</button>
+//         `;
+
+//         // Redirect to city page on click
+//         card.querySelector(".view-more").onclick = () => {
+//         window.location.href = `city.html?state=${state}&city=${city.name}`;
+//         };
+
+//         container.appendChild(card);
+//       });
+//     })
+//     .catch((err) => {
+//       console.error("Error loading data:", err);
+//       document.getElementById("title").innerText = "Error loading state data.";
+//     });
+// });
+ 
     </script>
     </body>
 </html>

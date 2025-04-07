@@ -403,6 +403,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: flex-start; 
 }
 .footer-left {
     max-width: 300px;
@@ -421,6 +422,7 @@ footer {
     justify-content: space-between;
     flex-wrap: nowrap;
     width: 70%;
+    margin-left:auto;
 }
 .footer-column {
     width: 200px;
@@ -449,7 +451,7 @@ button {
     background-color: #007bff;
     color: white;
     padding: 10px;
-    width: 100%;
+    width: 10vw;
     border: none;
     cursor: pointer;
     border-radius: 5px;
