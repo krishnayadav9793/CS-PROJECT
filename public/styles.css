@@ -395,9 +395,15 @@ button:hover {
     flex: 1 1 calc(33.33% - 15px); 
 }
 footer {
+    display: flex;
     background-color: white;
     color: black;
-    padding: 40px 80px;
+    /* padding: 40px 80px; */
+    width: 100vw;
+    margin: 0;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
 }
 .footer-container {
     display: flex;
@@ -406,7 +412,8 @@ footer {
     align-items: flex-start; 
 }
 .footer-left {
-    max-width: 300px;
+    /* max-width: 300px; */
+    width: 100%;
 }
 .brand {
     font-size: 24px;
@@ -421,7 +428,7 @@ footer {
     display: flex; 
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: 70%;
+    width: 100%;
     margin-left:auto;
 }
 .footer-column {
@@ -638,4 +645,10 @@ button:hover {
     .image-container {
         flex: 1 1 100%;
     }
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
