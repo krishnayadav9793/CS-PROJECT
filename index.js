@@ -1,13 +1,27 @@
+require("dotenv").config(); // 🔑 Load .env variables
+
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
+// ✅ CORS Configuration
+const corsOptions = {
+  origin: process.env.CORS_ORIGIN || "http://127.0.0.1:5500", // allow frontend origin from .env
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+};
+
+app.use(cors(corsOptions));
 app.use(express.static("public"));
 app.use(express.json());
 
-// ✅ MongoDB connection
-mongoose.connect("mongodb://127.0.0.1:27017/tourismDB")
+// ✅ MongoDB Atlas connection
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
   .then(() => {
     console.log("✅ MongoDB connected successfully!");
   })
@@ -33,7 +47,6 @@ const stateSchema = new mongoose.Schema({
   cities: [citySchema]
 });
 
-// ✅ Model based on state schema
 const Destination = mongoose.model("Destination", stateSchema, "destinations");
 
 // ✅ API route to get data by state
@@ -44,12 +57,13 @@ app.get("/api/destinations", async (req, res) => {
     const result = await Destination.findOne({ state: stateName });
 
     if (!result) {
+      console.warn(`⚠️ No data found for state: ${stateName}`);
       return res.status(404).json({ error: "State not found" });
     }
 
     res.json(result);
   } catch (err) {
-    console.error(err);
+    console.error("❌ Error during /api/destinations:", err);
     res.status(500).json({ error: "Server error" });
   }
 });

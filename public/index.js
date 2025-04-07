@@ -6,8 +6,11 @@ const port = 3000;
 app.use(express.static("public"));
 app.use(express.json());
 
-// ✅ MongoDB connection
-mongoose.connect("mongodb://127.0.0.1:27017/tourismDB")
+// ✅ MongoDB Atlas connection
+mongoose.connect("mongodb+srv://khushi:Khushi*14@clusternannu.vx8kdol.mongodb.net/tourismDB?retryWrites=true&w=majority&appName=ClusterNannu", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
   .then(() => {
     console.log("✅ MongoDB connected successfully!");
   })

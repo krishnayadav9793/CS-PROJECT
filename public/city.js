@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   container.innerHTML = "<p>Loading cities...</p>";
 
   try {
-    const res = await fetch(`/api/destinations?state=${stateName}`);
+    const res = await fetch(`http://localhost:3000/api/destinations?state=${stateName}`);
     const data = await res.json();
 
     if (!data.cities || data.cities.length === 0) {
