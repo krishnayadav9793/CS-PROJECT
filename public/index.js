@@ -6,19 +6,19 @@ const port = 3000;
 app.use(express.static("public"));
 app.use(express.json());
 
-// ✅ MongoDB Atlas connection
+//  MongoDB Atlas connection
 mongoose.connect("mongodb+srv://khushi:Khushi*14@clusternannu.vx8kdol.mongodb.net/tourismDB?retryWrites=true&w=majority&appName=ClusterNannu", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
   .then(() => {
-    console.log("✅ MongoDB connected successfully!");
+    console.log(" MongoDB connected successfully!");
   })
   .catch((err) => {
-    console.error("❌ MongoDB connection failed:", err);
+    console.error(" MongoDB connection failed:", err);
   });
 
-// ✅ Schema Definitions
+//  Schema Definitions
 const attractionSchema = new mongoose.Schema({
   name: String,
   image: String,
@@ -36,10 +36,10 @@ const stateSchema = new mongoose.Schema({
   cities: [citySchema]
 });
 
-// ✅ Model based on state schema
+//  Model based on state schema
 const Destination = mongoose.model("Destination", stateSchema, "destinations");
 
-// ✅ API route to get data by state
+//  API route to get data by state
 app.get("/api/destinations", async (req, res) => {
   const stateName = req.query.state;
 
@@ -57,7 +57,7 @@ app.get("/api/destinations", async (req, res) => {
   }
 });
 
-// ✅ Start the server
+//  Start the server
 app.listen(port, () => {
-  console.log(`🚀 Server running at http://localhost:${port}`);
+  console.log(` Server running at http://localhost:${port}`);
 });

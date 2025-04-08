@@ -1,4 +1,4 @@
-require("dotenv").config(); // 🔑 Load .env variables
+require("dotenv").config(); //  Load .env variables
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 3000;
 
-// ✅ CORS Configuration
+//  CORS Configuration
 const corsOptions = {
   origin: process.env.CORS_ORIGIN || "http://127.0.0.1:5500", // allow frontend origin from .env
   methods: ["GET", "POST", "OPTIONS"],
@@ -17,19 +17,19 @@ app.use(cors(corsOptions));
 app.use(express.static("public"));
 app.use(express.json());
 
-// ✅ MongoDB Atlas connection
+//  MongoDB Atlas connection
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
   .then(() => {
-    console.log("✅ MongoDB connected successfully!");
+    console.log(" MongoDB connected successfully!");
   })
   .catch((err) => {
-    console.error("❌ MongoDB connection failed:", err);
+    console.error(" MongoDB connection failed:", err);
   });
 
-// ✅ Schema Definitions
+//  Schema Definitions
 const attractionSchema = new mongoose.Schema({
   name: String,
   image: String,
@@ -49,7 +49,7 @@ const stateSchema = new mongoose.Schema({
 
 const Destination = mongoose.model("Destination", stateSchema, "destinations");
 
-// ✅ API route to get data by state
+//  API route to get data by state
 app.get("/api/destinations", async (req, res) => {
   const stateName = req.query.state;
 
@@ -57,7 +57,7 @@ app.get("/api/destinations", async (req, res) => {
     const result = await Destination.findOne({ state: stateName });
 
     if (!result) {
-      console.warn(`⚠️ No data found for state: ${stateName}`);
+      console.warn(` No data found for state: ${stateName}`);
       return res.status(404).json({ error: "State not found" });
     }
 
@@ -68,7 +68,7 @@ app.get("/api/destinations", async (req, res) => {
   }
 });
 
-// ✅ Start the server
+//  Start the server
 app.listen(port, () => {
-  console.log(`🚀 Server running at http://localhost:${port}`);
+  console.log(` Server running at http://localhost:${port}`);
 });

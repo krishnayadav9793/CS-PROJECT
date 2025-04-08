@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     displayCities(data.cities);
   } catch (err) {
-    console.error("❌ Error fetching data:", err);
-    container.innerHTML = "<p>⚠️ Failed to load data. Please try again later.</p>";
+    console.error(" Error fetching data:", err);
+    container.innerHTML = "<p> Failed to load data. Please try again later.</p>";
   }
 });
 
