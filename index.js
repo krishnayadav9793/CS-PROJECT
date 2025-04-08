@@ -1,4 +1,4 @@
-require("dotenv").config(); //  Load .env variables
+require("dotenv").config(); 
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -6,7 +6,6 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 3000;
 
-//  CORS Configuration
 const corsOptions = {
   origin: process.env.CORS_ORIGIN || "http://127.0.0.1:5500", // allow frontend origin from .env
   methods: ["GET", "POST", "OPTIONS"],
@@ -17,7 +16,6 @@ app.use(cors(corsOptions));
 app.use(express.static("public"));
 app.use(express.json());
 
-//  MongoDB Atlas connection
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -29,7 +27,7 @@ mongoose.connect(process.env.MONGODB_URI, {
     console.error(" MongoDB connection failed:", err);
   });
 
-//  Schema Definitions
+
 const attractionSchema = new mongoose.Schema({
   name: String,
   image: String,
@@ -49,7 +47,7 @@ const stateSchema = new mongoose.Schema({
 
 const Destination = mongoose.model("Destination", stateSchema, "destinations");
 
-//  API route to get data by state
+
 app.get("/api/destinations", async (req, res) => {
   const stateName = req.query.state;
 
@@ -63,12 +61,11 @@ app.get("/api/destinations", async (req, res) => {
 
     res.json(result);
   } catch (err) {
-    console.error("❌ Error during /api/destinations:", err);
+    console.error(" Error during /api/destinations:", err);
     res.status(500).json({ error: "Server error" });
   }
 });
 
-//  Start the server
 app.listen(port, () => {
   console.log(` Server running at http://localhost:${port}`);
 });
