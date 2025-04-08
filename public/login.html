@@ -7,15 +7,23 @@
 </head>
 <body>
   <div class="container">
-    <h2>Login</h2>
+    <!-- <h2>Login</h2> -->
+    <h2>Welcome to India!</h2>
+            <p>
+                Explore the beauty, culture, and history of India with 
+                <strong>Bharat Bhraman</strong>. Start your journey today!
+            </p>
+    <div class="side-image">
     <form id="loginForm">
       <input type="email" name="email" placeholder="Email" required />
       <input type="password" name="password" placeholder="Password" required />
       <button type="submit">Login</button>
       <p>Don't have an account? <a href="signup.html">Signup</a></p>
+      <img src="./images/illustration.jpg" alt="illustration" height="100px">
     </form>
+    
   </div>
-
+  </div>
   <script>
     document.getElementById('loginForm').addEventListener('submit', async function (e) {
       e.preventDefault();
